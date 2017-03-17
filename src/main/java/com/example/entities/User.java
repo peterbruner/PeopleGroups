@@ -10,10 +10,10 @@ public class User {
     private int id;
 
     @Column
-    private String firstName;
+    private String affiliation;
 
     @Column
-    private String lastName;
+    private String name;
 
     @Column
     private String address;
@@ -27,8 +27,6 @@ public class User {
     @Column
     private String flavor;
 
-    //@ManyToOne
-
     public int getId() {
         return id;
     }
@@ -37,20 +35,20 @@ public class User {
         this.id = id;
     }
 
-    public String getFirstName() {
-        return firstName;
+    public String getAffiliation() {
+        return affiliation;
     }
 
-    public void setFirstName(String firstName) {
-        this.firstName = firstName;
+    public void setAffiliation(String affiliation) {
+        this.affiliation = affiliation;
     }
 
-    public String getLastName() {
-        return lastName;
+    public String getName() {
+        return name;
     }
 
-    public void setLastName(String lastName) {
-        this.lastName = lastName;
+    public void setName(String name) {
+        this.name = name;
     }
 
     public String getAddress() {
