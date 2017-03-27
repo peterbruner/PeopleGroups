@@ -9,6 +9,8 @@ import org.springframework.test.context.junit4.SpringRunner;
 @SpringBootTest
 public class PeopleGroupsApplicationTests {
 
+	//http://localhost:8080/user
+
 	@Test
 	public void contextLoads() {
 	}
