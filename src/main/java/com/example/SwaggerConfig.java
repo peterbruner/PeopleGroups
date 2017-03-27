@@ -31,12 +31,12 @@ public class SwaggerConfig {
     private ApiInfo metaData() {
         ApiInfo apiInfo = new ApiInfo(
                 "unique relevant name",
-                "",
+                "a",
                 "1.0",
-                "",
-                "",
-                "",
-                ""
+                "b",
+                "c",
+                "d",
+                "e"
         );
         return apiInfo;
     }
