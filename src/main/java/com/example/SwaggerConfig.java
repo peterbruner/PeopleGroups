@@ -32,7 +32,7 @@ public class SwaggerConfig {
         ApiInfo apiInfo = new ApiInfo(
                 "unique relevant name",
                 "",
-                "",
+                "1.0",
                 "",
                 "",
                 "",
