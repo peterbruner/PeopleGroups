@@ -11,6 +11,7 @@ import java.util.List;
 
 @RestController
 public class PeopleGroupController {
+
     @Autowired
     UserRepository users;
 
@@ -20,8 +21,7 @@ public class PeopleGroupController {
     }
 
     @RequestMapping(path = "/user", method = RequestMethod.POST)
-    public void addUser(@RequestBody User user) {
-        users.save(user);
+    public void addUser(@RequestBody User user) {users.save(user);
     }
 
     @RequestMapping(path = "/user", method = RequestMethod.PUT)

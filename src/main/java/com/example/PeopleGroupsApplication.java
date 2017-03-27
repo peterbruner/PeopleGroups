@@ -10,3 +10,4 @@ public class PeopleGroupsApplication {
 		SpringApplication.run(PeopleGroupsApplication.class, args);
 	}
 }
+
