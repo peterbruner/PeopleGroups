@@ -31,11 +31,11 @@ public class SwaggerConfig {
     private ApiInfo metaData() {
         ApiInfo apiInfo = new ApiInfo(
                 "unique relevant name",
-                "Spring Boot REST API for Online Store",
+                "which cannot be changed",
                 "1.0",
                 "Terms of service",
-                "John Thompson",
-                "Apache License Version 2.0",
+                "you!",
+                "Assuredly a license",
                 "https://www.apache.org/licenses/LICENSE-2.0"
         );
         return apiInfo;
