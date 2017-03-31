@@ -7,6 +7,9 @@ import com.example.services.UserRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpEntity;
 import org.springframework.http.ResponseEntity;
+import org.springframework.security.core.Authentication;
+import org.springframework.security.core.context.SecurityContextHolder;
+import org.springframework.security.web.authentication.logout.SecurityContextLogoutHandler;
 import org.springframework.util.LinkedMultiValueMap;
 import org.springframework.util.MultiValueMap;
 import org.springframework.web.bind.annotation.*;
@@ -14,13 +17,15 @@ import org.springframework.web.client.RestTemplate;
 
 
 import javax.annotation.PostConstruct;
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
 @RestController
-public class PeopleGroupController {
+public class PeopleGroupRestController {
     @Autowired
     UserRepository users;
 
@@ -74,6 +79,8 @@ public class PeopleGroupController {
 
         ResponseEntity<?> response = new RestTemplate().postForEntity(url, request, String.class);
     }
+
+
 
     @PostConstruct
     public void populator() throws IOException {
