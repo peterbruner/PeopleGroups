@@ -80,8 +80,6 @@ public class PeopleGroupRestController {
         ResponseEntity<?> response = new RestTemplate().postForEntity(url, request, String.class);
     }
 
-
-
     @PostConstruct
     public void populator() throws IOException {
         if (users.count() == 0) {
