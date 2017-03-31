@@ -47,8 +47,7 @@ public class PeopleGroupController {
     @RequestMapping(path = "/djuser/{id}", method = RequestMethod.GET)
     public Dangelo getDangeloUser(@PathVariable("id") int id) {
         RestTemplate restTemplate = new RestTemplate();
-        Dangelo dangelo = restTemplate.getForObject("https://secure-retreat-36287.herokuapp.com/user/{id}", Dangelo.class);
-        System.out.println(dangelo.getName());
+        Dangelo dangelo = restTemplate.getForObject("https://secure-retreat-36287.herokuapp.com/user/" + id, Dangelo.class);
         return dangelo;
     }
 
@@ -64,13 +63,11 @@ public class PeopleGroupController {
         headers.setAll(map);
 
         Map req_payload = new HashMap();
-        req_payload.put("address", "987 here St");
-        req_payload.put("cellphone", "1234567");
-        req_payload.put("email", "e@mail");
-        req_payload.put("name", "nameyname");
-        req_payload.put("servicebranch", "army");
-
-        System.out.println(map.containsKey("address"));
+        req_payload.put("address", dangelo.getAddress());
+        req_payload.put("cellphone", dangelo.getPhonenumber());
+        req_payload.put("email", dangelo.getEmail());
+        req_payload.put("name", dangelo.getName());
+        req_payload.put("servicebranch", dangelo.getSsn());
 
         HttpEntity<?> request = new HttpEntity<>(req_payload, headers);
         String url = "https://pure-lake-90830.herokuapp.com/user";
